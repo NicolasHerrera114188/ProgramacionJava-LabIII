@@ -7,18 +7,29 @@ public class Main {
 
         /* 1. Declarar dos variables enteras y cargar sus valores por teclado. Informar su
               suma, diferencia, producto y cociente. */
-        Scanner scan = new Scanner(System.in);
-        System.out.println("Ingrese valor entero: ");
-        int valor1= scan.nextInt();
-        System.out.println("Ingrese otro valor entero: ");
-        int valor2= scan.nextInt();
-        int resSuma=valor1+valor2;
-        int resDiv=valor1/valor2;
-        int resMult=valor1*valor2;
-        int resCoci=valor1%valor2;
-        System.out.println("Suma: "+valor1+" + "+valor2+"= "+resSuma);
-        System.out.println("Diferencia: "+valor1+" / "+valor2+"= "+resDiv);
-        System.out.println("Producto: "+valor1+" X "+valor2+"= "+resMult);
-        System.out.println("Cociente: "+valor1+" y "+valor2+"= "+resCoci);
+       Scanner scanner = new Scanner(System.in);
+       int valor1, valor2, cociente;
+       double suma, diferencia, producto;
+       System.out.println("-----------------Ingrese dos valores enteros----------------");
+       System.out.println("valor 1: ");
+       valor1= scanner.nextInt();
+       System.out.println("valor 2");
+       valor2=scanner.nextInt();
+
+       if(valor2==0)
+       {
+          System.out.println("!ERROR NO SE PUEDE HACER DIFERENCIA DE CERO VUELVA DIGITAR VALOR 2:");
+          valor2=scanner.nextInt();
+       }
+       suma= valor1+valor2;
+       diferencia=valor1/valor2;
+       producto=valor1*valor2;
+       cociente=valor1%valor2;
+
+       System.out.println("resultado de la operaciones:");
+       System.out.println("Suma: "+suma);
+       System.out.println("Diferencia: "+diferencia);
+       System.out.println("Producto: "+producto);
+       System.out.println("Cociente entre los dos numero: "+cociente);
     }
 }
